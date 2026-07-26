@@ -317,8 +317,8 @@ body.dragging * {
 }
 
 .skill-slot {
-  background-color: #372E3F;
-  border: 1.5px solid rgba(236, 72, 153, 0.18);
+  background-color: #575757;
+  border: 1.5px solid #000;
   border-radius: 8px;
   padding: 14px 8px;
   display: flex;
@@ -329,26 +329,17 @@ body.dragging * {
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.skill-slot:hover {
-  background-color: #423649;
+.skill-slot:hover, .skill-learning:hover {
+  background-color: #363636;
   border-color: var(--pink);
   transform: translateY(-2px);
 }
 
-.skill-learning {
-  border-style: dashed;
-  border-color: rgba(236, 72, 153, 0.35);
-}
-
-.skill-learning:hover {
-  border-color: var(--pink);
-}
-
 .skill-icon {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
-  background-color: #F4EEF6;
+  /* background-color: #F4EEF6; */
   border-radius: 8px;
   padding: 6px;
   box-sizing: border-box;
