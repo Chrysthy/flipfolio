@@ -5,35 +5,405 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chrystine Martins — Web Developer</title>
+
+    <script src="https://cdn.counter.dev/script.js" data-id="87e7cad3-9103-41ff-ae7b-17f0c47fa0e8"
+        data-utcoffset="-3"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Audiowide&family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="src/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
 
 <body>
 
-    <div class="album-viewport" id="album-viewport">
+    <button id="sound-toggle" class="sound-btn" aria-label="Toggle sound">
+        <svg class="sound-icon-on" viewBox="0 0 24 24" width="22" height="22">
+            <path fill="currentColor"
+                d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.77 16.5,12M3,9V15H7L12,20V4L7,9H3Z" />
+        </svg>
+        <svg class="sound-icon-off hidden" viewBox="0 0 24 24" width="22" height="22">
+            <path fill="currentColor"
+                d="M12,4L9.91,6.09L12,8.18M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.5C15.58,18 14.83,18.4 14,18.71V20.77C15.38,20.44 16.63,19.78 17.7,18.9L20.73,21.93L22,20.66L4.27,3M14,3.23V5.29C14.73,5.5 15.43,5.83 16.07,6.26L14.59,7.74C14.41,7.65 14.21,7.58 14,7.54V9.54L19,14.54C19,13.7 19,12.85 19,12C19,7.72 16,4.14 14,3.23M16.5,12C16.5,11.2 16.1,10.5 15.5,10.05L14,11.55V12.45L15.46,13.9C15.48,13.28 16.5,12.62 16.5,12Z" />
+        </svg>
+    </button>
 
+    <button id="btn-prev" class="nav-btn nav-btn-left" aria-label="Previous page">
+        <svg viewBox="0 0 24 24" width="32" height="32">
+            <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+        </svg>
+    </button>
+
+    <button id="btn-next" class="nav-btn nav-btn-right" aria-label="Next page">
+        <svg viewBox="0 0 24 24" width="32" height="32">
+            <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+        </svg>
+    </button>
+
+    <div class="album-viewport" id="album-viewport">
         <div class="flip-book" id="book">
 
-            <!-- páginas carregadas pelo JavaScript -->
+            <!-- COVER: TECH / CIRCUIT THEME -->
+            <div class="page page-cover" data-density="hard">
+                <div class="page-content cover-content">
+                    <span class="cover-eyebrow">PORTFOLIO</span>
+
+                    <div class="hero-stars">
+                        <span class="star s1"></span>
+                        <span class="star s2"></span>
+                        <span class="star s3"></span>
+                        <span class="star s4"></span>
+                        <span class="star s5"></span>
+                        <span class="star s6"></span>
+                        <span class="star s7"></span>
+                        <span class="star s8"></span>
+                        <span class="star s9"></span>
+                        <span class="star s10"></span>
+                        <span class="star s11"></span>
+                        <span class="star s12"></span>
+                    </div>
+
+                    <div class="cover-body">
+                        <div class="hero-tech">
+                            <div class="core-glow"></div>
+                            <div class="core-ring ring1"></div>
+                            <div class="core-ring ring2"></div>
+                            <div class="core-ring ring3"></div>
+
+                            <svg class="laptop-silhouette" viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="45" y="14" width="110" height="78" rx="8" class="laptop-screen-glass" />
+                                <rect x="52" y="21" width="96" height="64" rx="4" class="laptop-screen-inner" />
+                                <path d="M30 96 L170 96 L182 118 Q182 124 176 124 L24 124 Q18 124 18 118 Z"
+                                    class="laptop-base-glass" />
+                                <rect x="90" y="108" width="20" height="4" rx="2" class="laptop-notch" />
+                            </svg>
+
+                            <div class="side-icons side-left">
+                                <div class="side-icon float-1"><img
+                                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+                                        alt="React"></div>
+                                <div class="side-icon float-2"><img
+                                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
+                                        alt="Git"></div>
+                                <div class="side-icon float-3"><img
+                                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
+                                        alt="Node.js"></div>
+                            </div>
+                            <div class="side-icons side-right">
+                                <div class="side-icon float-2"><img
+                                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+                                        alt="Python"></div>
+                                <div class="side-icon float-1"><img
+                                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"
+                                        alt="JavaScript"></div>
+                                <div class="side-icon float-3"><img
+                                        src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/n8n.png"
+                                        alt="n8n"></div>
+                            </div>
+                        </div>
+
+                        <h1 class="cover-title">CHRYSTINE<br>MARTINS</h1>
+
+                        <br>
+
+                        <p class="cover-tagline">Code • Automation • AI</p>
+                        <div class="hero-divider"></div>
+                        <h2 class="cover-subtitle"><span id="typing-text"></span><span class="cursor">|</span></h2>
+                    </div>
+                    <span class="cover-footer">Drag a corner or use the arrows to turn the page →</span>
+                </div>
+            </div>
+
+            <!-- PAGE 1: ABOUT -->
+            <div class="page page-left">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-about">01</span>
+                        <h3 class="page-title">About Me</h3>
+                    </div>
+                    <div class="about-body">
+                        <img class="about-photo" src="src/image/Eu 2.jpeg" alt="Photo of Chrystine Martins">
+                        <p class="about-text">
+                            Hello! I'm Chrystine Martins, a web developer with a background in Human Resources. My
+                            career has given me strong communication, organization, and problem-solving skills, which I
+                            now combine with software development to build practical and user-focused solutions.
+                        </p>
+
+                        <p class="about-text">
+                            I hold a bachelor's degree in Human Resources and a second bachelor's degree in Systems
+                            Analysis and Development, along with a postgraduate specialization in Full-Stack
+                            Development. I enjoy learning by building real projects, exploring new technologies, and
+                            continuously improving both my technical and professional skills.
+                        </p>
+
+                        <p class="about-text">
+                            I believe that combining my experience in HR with my technical education allows me to bring
+                            a unique perspective to development teams.
+                        </p>
+
+
+                        <p class="about-quote">
+                            "I'm the type of person that if you ask me a question and I don't know the
+                            answer, I'm gonna tell you that I don't know. But I bet you what, I know how to
+                            find the answer and I will find the answer." <span>— Chris Gardner</span>
+                        </p>
+                        <a class="cta-link" href="src/doc/chrystine-martins.pdf" target="_blank" rel="noopener">Download
+                            résumé ↗</a>
+                    </div>
+                    <div class="page-footer"><span>01</span><span>About</span></div>
+                </div>
+            </div>
+
+            <!-- PAGE 2: CORE STACK -->
+            <div class="page page-right">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-skills">02</span>
+                        <h3 class="page-title">Core Stack</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-slot"><img class="skill-icon"
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
+                                alt="Git">
+                            <div class="slot-name">Git</div>
+                        </div>
+                        <div class="skill-slot"><img class="skill-icon"
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg"
+                                alt="GitHub">
+                            <div class="slot-name">GitHub</div>
+                        </div>
+                        <div class="skill-slot"><img class="skill-icon"
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg"
+                                alt="VS Code">
+                            <div class="slot-name">VS Code</div>
+                        </div>
+                        <div class="skill-slot"><img class="skill-icon"
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+                                alt="HTML5">
+                            <div class="slot-name">HTML5</div>
+                        </div>
+                        <div class="skill-slot"><img class="skill-icon"
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+                                alt="CSS3">
+                            <div class="slot-name">CSS3</div>
+                        </div>
+                        <div class="skill-slot"><img class="skill-icon"
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"
+                                alt="JavaScript">
+                            <div class="slot-name">JavaScript</div>
+                        </div>
+                        <div class="skill-slot"><img class="skill-icon"
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postman/postman-original.svg"
+                                alt="Postman">
+                            <div class="slot-name">Postman</div>
+                        </div>
+                    </div>
+                    <div class="page-footer"><span>02</span><span>Skills</span></div>
+                </div>
+            </div>
+
+            <!-- PAGE 3: ALSO WORKED WITH -->
+            <div class="page page-left">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-skills">03</span>
+                        <h3 class="page-title">Also Worked With</h3>
+                    </div>
+                    <div class="skills-grid skills-grid-dense">
+                        <div class="skill-slot"><img class="skill-icon"
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg"
+                                alt="Figma">
+                            <div class="slot-name">Figma</div>
+                        </div>
+                        <div class="skill-slot"><img class="skill-icon"
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg"
+                                alt="Bootstrap">
+                            <div class="slot-name">Bootstrap</div>
+                        </div>
+                        <div class="skill-slot"><img class="skill-icon"
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
+                                alt="Node.js">
+                            <div class="slot-name">Node.js</div>
+                        </div>
+                        <div class="skill-slot"><img class="skill-icon"
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original.svg"
+                                alt="NPM">
+                            <div class="slot-name">NPM</div>
+                        </div>
+                        <div class="skill-slot"><img class="skill-icon"
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jest/jest-plain.svg"
+                                alt="Jest">
+                            <div class="slot-name">Jest</div>
+                        </div>
+                        <div class="skill-slot"><img class="skill-icon"
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+                                alt="React">
+                            <div class="slot-name">React</div>
+                        </div>
+                        <div class="skill-slot"><img class="skill-icon"
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+                                alt="TypeScript">
+                            <div class="slot-name">TypeScript</div>
+                        </div>
+                        <div class="skill-slot"><img class="skill-icon"
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg"
+                                alt="MongoDB">
+                            <div class="slot-name">MongoDB</div>
+                        </div>
+                    </div>
+                    <div class="page-footer"><span>03</span><span>Skills</span></div>
+                </div>
+            </div>
+
+            <!-- PAGE 4: LEARNING -->
+            <div class="page page-right">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-learning">04</span>
+                        <h3 class="page-title">Currently Learning</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-slot skill-learning"><img class="skill-icon"
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg"
+                                alt="Docker">
+                            <div class="slot-name">Docker</div>
+                        </div>
+                        <div class="skill-slot skill-learning"><img class="skill-icon skill-icon-n8n"
+                                src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/n8n.png"
+                                alt="n8n">
+                            <div class="slot-name">n8n</div>
+                        </div>
+                        <div class="skill-slot skill-learning"><img class="skill-icon"
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+                                alt="Python">
+                            <div class="slot-name">Python</div>
+                        </div>
+                    </div>
+                    <p class="learning-note">Always leveling up — these are the tools currently on my bench.</p>
+                    <div class="page-footer"><span>04</span><span>Learning</span></div>
+                </div>
+            </div>
+
+            <!-- PAGE 5: PROJECTS I (3 projects) -->
+            <div class="page page-left">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-projects">05</span>
+                        <h3 class="page-title">Projects</h3>
+                    </div>
+                    <div class="projects-list">
+                        <a class="project-card" href="https://chrysthy.github.io/Weather-Forecast/" target="_blank"
+                            rel="noopener">
+                            <div class="project-name">Weather Forecast</div>
+                            <p class="project-desc">Explore the weather forecast for any city, using a public weather
+                                API in real time.</p>
+                            <span class="project-link">GitHub Pages ↗</span>
+                        </a>
+                        <a class="project-card" href="https://chrysthy.github.io/fetch-github-api/" target="_blank"
+                            rel="noopener">
+                            <div class="project-name">Fetch GitHub API</div>
+                            <p class="project-desc">A GitHub profile viewer built with HTML, CSS and JS, using the
+                                GitHub API to search profiles and repos.</p>
+                            <span class="project-link">GitHub Pages ↗</span>
+                        </a>
+                        <a class="project-card" href="https://github.com/Chrysthy/automated-newsletter-n8n"
+                            target="_blank" rel="noopener">
+                            <div class="project-name">Automated Newsletter n8n</div>
+                            <p class="project-desc">Turns RSS feeds into a structured briefing using Gemini for
+                                summarization and n8n for orchestration.</p>
+                            <span class="project-link">GitHub ↗</span>
+                        </a>
+                    </div>
+                    <div class="page-footer"><span>05</span><span>Projects</span></div>
+                </div>
+            </div>
+
+            <!-- PAGE 6: PROJECTS II (3 projects) -->
+            <div class="page page-right">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-projects">06</span>
+                        <h3 class="page-title">Projects</h3>
+                    </div>
+                    <div class="projects-list">
+                        <a class="project-card" href="https://github.com/Chrysthy/contract-generator-n8n"
+                            target="_blank" rel="noopener">
+                            <div class="project-name">Contract Generator n8n</div>
+                            <p class="project-desc">Automates the creation and delivery of rental contracts for event
+                                venues and properties.</p>
+                            <span class="project-link">GitHub ↗</span>
+                        </a>
+                        <a class="project-card" href="https://ai-code-analyzer-wejp.onrender.com/" target="_blank"
+                            rel="noopener">
+                            <div class="project-name">AI Code Analyzer</div>
+                            <p class="project-desc">Uses AI to review code, detect bugs or errors, and suggest
+                                improvements.</p>
+                            <span class="project-link">GitHub Pages ↗</span>
+                        </a>
+                        <a class="project-card" href="https://chrysthy.github.io/botflix/" target="_blank"
+                            rel="noopener">
+                            <div class="project-name">Botflix</div>
+                            <p class="project-desc">Combines movie API integration, n8n workflows, and Gemini AI for
+                                personalized movie recommendations.</p>
+                            <span class="project-link">GitHub Pages ↗</span>
+                        </a>
+                    </div>
+                    <a class="cta-link cta-secondary" href="https://github.com/Chrysthy?tab=repositories"
+                        target="_blank" rel="noopener">More projects can be found on my GitHub. ↗</a>
+                    <br>
+                    <div class="page-footer"><span>06</span><span>Projects</span></div>
+                </div>
+            </div>
+
+            <!-- BACK COVER: CLOSING -->
+            <div class="page page-cover-back" data-density="hard">
+                <div class="page-content cover-back-content">
+                    <svg class="cover-tech cover-tech-back" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="160" y1="160" x2="55" y2="55" class="circuit-line" />
+                        <line x1="160" y1="160" x2="265" y2="55" class="circuit-line" />
+                        <line x1="160" y1="160" x2="55" y2="265" class="circuit-line" />
+                        <line x1="160" y1="160" x2="265" y2="265" class="circuit-line" />
+                        <circle cx="55" cy="55" r="4.5" class="circuit-node" />
+                        <circle cx="265" cy="55" r="4.5" class="circuit-node" />
+                        <circle cx="55" cy="265" r="4.5" class="circuit-node" />
+                        <circle cx="265" cy="265" r="4.5" class="circuit-node" />
+                        <circle cx="160" cy="160" r="26" class="closing-core" />
+                    </svg>
+                    <div class="cover-back-header">
+                        <h2>Continue?</h2>
+                    </div>
+                    <div class="cover-back-body">
+                        <p class="summary-text">
+                            Send me a message!
+                        </p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/chrystine-martins-o-v/" target="_blank"
+                                rel="noopener">LinkedIn</a>
+                            <a href="https://api.whatsapp.com/send?phone=5531983771651&text=Hi!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20to%20you!"
+                                target="_blank" rel="noopener">WhatsApp</a>
+                            <a href="https://github.com/Chrysthy" target="_blank" rel="noopener">GitHub</a>
+                            <a href="https://www.instagram.com/chrysthy.martins/" target="_blank"
+                                rel="noopener">Instagram</a>
+                            <a href="mailto:chrystine.martins@outlook.com">Email</a>
+                        </div>
+                    </div>
+                    <span class="cover-back-footer">Thanks for stopping by</span>
+                </div>
+            </div>
 
         </div>
-
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
 
-    <script src="src/js/config.js"></script>
-    <script src="src/js/pageFlip.js"></script>
-    <script src="src/js/drag.js"></script>
-    <script src="src/js/sound.js"></script>
-    <script src="src/js/typing.js"></script>
     <script src="src/js/app.js"></script>
 
 </body>
