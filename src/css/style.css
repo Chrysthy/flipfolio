@@ -874,11 +874,11 @@ body.dragging * {
   opacity: 0.5;
 }
 
-.closing-core {
-  fill: none;
+.closing-code {
+  fill: var(--pink);
+  font-size: 120px;
   stroke: var(--pink);
   stroke-width: 1.5;
-  opacity: 0.55;
 }
 
 .cover-back-header {
@@ -1006,7 +1006,7 @@ body.dragging * {
   .skills-grid,
   .skills-grid-dense {
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    gap: 10px;
   }
 
   .skill-slot {
