@@ -329,7 +329,8 @@ body.dragging * {
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.skill-slot:hover, .skill-learning:hover {
+.skill-slot:hover,
+.skill-learning:hover {
   background-color: #363636;
   border-color: var(--pink);
   transform: translateY(-2px);
