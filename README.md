@@ -48,6 +48,14 @@ I'm Chrystine Martins, and I'm excited to share with you my journey, experiences
 
 <br>
 
+## ✨ Features
+
+- Interactive flipbook interface
+- Responsive layout
+- Smooth page-turn animations
+
+<br>
+
 ## 📜 License
 
 * This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
