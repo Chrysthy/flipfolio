@@ -58,3 +58,6 @@ I'm Chrystine Martins, and I'm excited to share with you my journey, experiences
 <p> Contributions, issues, and feature requests are welcome! Please, feel free to do it! 😉 </p>
 
 <br>
+
+## 🌟 Support
+<p> If you like this project, please give it a star ⭐ and share it with others! 😄 </p>
