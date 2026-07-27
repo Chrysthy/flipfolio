@@ -56,6 +56,13 @@ I'm Chrystine Martins, and I'm excited to share with you my journey, experiences
 
 <br>
 
+
+## 💻 Project
+
+FlipFolio is an interactive portfolio built to present my professional journey, technical skills, and projects through a digital flipbook experience.
+
+<br>
+
 ## 📜 License
 
 * This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
