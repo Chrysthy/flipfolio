@@ -32,3 +32,9 @@ I'm Chrystine Martins, and I'm excited to share with you my journey, experiences
 </p>
 
 <br>
+
+## 📸 Screenshots
+
+<img src=".github/gif-do-projeto.gif" alt="Imagem do Projeto">
+
+<br>
